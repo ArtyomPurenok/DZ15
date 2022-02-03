@@ -7,5 +7,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 
-## [2.42.1] - 2021-12-22
-[2.42.1]: https://github.com/ArtemNikolaev/toLiveToPay/releases/tag/v2.42.1
+## [1.0.0] - 2022-02-03
+[1.0.0]: https://github.com/ArtyomPurenok/DZ15/releases/tag/1.0.0
