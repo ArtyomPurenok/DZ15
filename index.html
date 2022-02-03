@@ -3,14 +3,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>вёрстка</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="D:/DZ15/style.css">
 </head>
 
 <body>
 
     <div class="divSelect">
         <select name="currency" class="currency">
-          
+          <option>Выберите валюту</option>
         </select>
     </div>
 
@@ -21,8 +21,8 @@
     </div>
 
     <div class="divInput">
-        <input type="text" class="inp1" placeholder="Введите стартовый год">
-        <input type="text" class="inp2" >
+        <input type="date" class="inp1" placeholder="Введите стартовый год">
+        <input type="date" class="inp2" >
     </div>
 
     <div><p>Валюта</p></div>
@@ -33,10 +33,17 @@
       </table>
     </div>
 
+    <three-currencies></three-currencies>
 
 
 
 
-  <script src="JavaScript.js"></script>
+
+
+
+
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  <script src="D:/DZ15/JavaScript.js"></script>
+  <script src="D:/DZ15/Encapsulation.js"></script>
 </body>
 </html>
