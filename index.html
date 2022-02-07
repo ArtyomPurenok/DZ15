@@ -3,47 +3,60 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>вёрстка</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="D:/DZ15/style.css">
 </head>
 
 <body>
 
+
+<header>
+  <div class="buttons">
+    <button class="week">week</button>
+    <button class="month">month</button>
+    <button class="year">year</button>
+</div>
+
+<div class="divInput">
+    <input type="date" class="inp1">
+    <input type="date" class="inp2">
+</div>
+</header>
+
+
+<div class="main">
+  <div class="centerLeft">
     <div class="divSelect">
-        <select name="currency" class="currency">
-          <option>Выберите валюту</option>
-        </select>
+      <select name="currency" class="currency">
+        <option>Выберите валюту</option>
+      </select>
+
+      <div class="cnv">
+        <canvas id="logo"></canvas>
+      </div>
+      
     </div>
+  </div>
 
-    <div class="buttons">
-        <button class="week">week</button>
-        <button class="month">month</button>
-        <button class="year">year</button>
-    </div>
-
-    <div class="divInput">
-        <input type="date" class="inp1" placeholder="Введите стартовый год">
-        <input type="date" class="inp2" >
-    </div>
-
-    <div><p>Валюта</p></div>
-
+  <div class="centerTabl">
     <div class="tab">
       <table class="tabl">
-
+        
       </table>
     </div>
+  </div>
 
+  <div class="miniTab">
     <three-currencies></three-currencies>
-
-
-
-
+  </div>
+</div>
+    
 
 
 
 
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
-  <script src="JavaScript.js"></script>
-  <script src="Encapsulation.js"></script>
+  <script src="D:/DZ15/JavaScript.js"></script>
+  <script src="D:/DZ15/Encapsulation.js"></script>
+  <script src="D:/DZ15/logo.js"></script>
 </body>
 </html>
