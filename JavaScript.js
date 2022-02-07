@@ -36,7 +36,7 @@ divSelect.addEventListener('change', function (event) {
     let objCurrency = currencyArr.find(el => el.Cur_Name === event.target.value)
     objToSearch = "";
     objToSearch = objCurrency
-    console.log(objToSearch)
+    console.log(currencyArr)
     if (inpDateStart.value && inpDateEnd.value) {
       data()
     }
@@ -62,7 +62,7 @@ function data() {
       .then(function pushTable(data) {
        tabl.innerHTML = ""
         for (let i = 0; i <= data.length-1; i++) {
-          tabl.innerHTML += `<tr> <td>Дата:${data[i].Date.slice(0,10)}</td> <td>Курс:${data[i].Cur_OfficialRate}</td> </tr>`
+          tabl.innerHTML += `<tr> <td>Дата: ${data[i].Date.slice(0,10)}</td> <td>Курс: ${data[i].Cur_OfficialRate}</td> </tr>`
         }
       })
 }
@@ -81,7 +81,7 @@ week.addEventListener('click', function() {
    .then(function pushTable(data) {
     tabl.innerHTML = ""
      for (let i = 0; i <= data.length-1; i++) {
-       tabl.innerHTML += `<tr> <td>Дата:${data[i].Date.slice(0,10)}</td> <td>Курс:${data[i].Cur_OfficialRate}</td> </tr>`
+       tabl.innerHTML += `<tr> <td>Дата: ${data[i].Date.slice(0,10)}</td> <td>Курс: ${data[i].Cur_OfficialRate}</td> </tr>`
      }
    })
 })
@@ -95,7 +95,7 @@ month.addEventListener('click', function() {
    .then(function pushTable(data) {
     tabl.innerHTML = ""
      for (let i = 0; i <= data.length-1; i++) {
-       tabl.innerHTML += `<tr> <td>Дата:${data[i].Date.slice(0,10)}</td> <td>Курс:${data[i].Cur_OfficialRate}</td> </tr>`
+       tabl.innerHTML += `<tr> <td>Дата: ${data[i].Date.slice(0,10)}</td> <td>Курс: ${data[i].Cur_OfficialRate}</td> </tr>`
      }
    })
 })
@@ -109,7 +109,7 @@ year.addEventListener('click', function() {
    .then(function pushTable(data) {
     tabl.innerHTML = ""
      for (let i = 0; i <= data.length-1; i++) {
-       tabl.innerHTML += `<tr> <td>Дата:${data[i].Date.slice(0,10)}</td> <td>Курс:${data[i].Cur_OfficialRate}</td> </tr>`
+       tabl.innerHTML += `<tr> <td>Дата: ${data[i].Date.slice(0,10)}</td> <td>Курс: ${data[i].Cur_OfficialRate}</td> </tr>`
      }
    })
 })

@@ -85,12 +85,15 @@ class threeCurrencies extends HTMLElement {
 
     style.textContent = `
     .divgeneral {
-      background: linear-gradient(to bottom right, #ffff00 0%, #ff9900 100%);
+        color: white;
+        font-family: sans-serif;
+        background: linear-gradient(to right, #8d8d8d 0%, #525252 100%);
         width: 300px;
         height: 160px;
         display: flex;
         justify-content: space-evenly;
         border-radius: 7px;
+        box-shadow: 0 0 20px gold;
       } 
     img {
         border-radius: 7px;
@@ -123,7 +126,7 @@ class threeCurrencies extends HTMLElement {
         font-size: 20px;
         text-align: center;
         padding: 14px 0 0 0;
-        
+        font-family: sans-serif;
       }
       
      
@@ -134,7 +137,7 @@ class threeCurrencies extends HTMLElement {
         flex-direction: column;
       }
       .currencyDivOne, .currencyDivTwo, .currencyDivThree {
-        font-weight: 900;
+        font-weight: 600;
         font-size: 21px;
         text-align: center;
         padding: 14px 0 0 0;
