@@ -160,8 +160,6 @@ td {
 }
 .charts {
     display: none;
-    width: 750px;
-    height: 340px;
 }
 
 .openChartBtn {

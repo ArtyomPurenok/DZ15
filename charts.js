@@ -23,7 +23,9 @@ function drawBackgroundColor() {
         vAxis: {
           title: 'Сurrency'
         },
-        backgroundColor: '#f1f8e9'
+        backgroundColor: '#f1f8e9',
+        width: 750,
+        height: 340,
       };
 
       var chart = new google.visualization.LineChart(document.querySelector('.charts'));
