@@ -11,7 +11,12 @@ header {
     top: 0;
 }
 .buttons {
+    display: flex;
     margin-bottom: 10px;
+    height: 70px;
+}
+.BTNBlock{
+    margin: 10px 0 0 150px;
 }
 .week {
     margin-top: 10px;
@@ -23,7 +28,7 @@ header {
     border: 2px solid white;
     background: rgb(112, 112, 112);
     color: white;
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 10px white;
 }
 .week:hover {
     background-color: rgb(138, 138, 138);
@@ -40,7 +45,7 @@ header {
     border: 2px solid white;
     background: rgb(112, 112, 112);
     color: white;
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 10px white;
 }
 .month:hover {
     background-color: rgb(138, 138, 138);
@@ -58,13 +63,16 @@ header {
     border: 2px solid white;
     background: rgb(112, 112, 112);
     color: white;
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 10px white;
 }
 .year:hover {
     background-color: rgb(138, 138, 138);
     box-shadow: 0 0 20px gold;
     transition: background-color 0s ease-in,
     box-shadow 0.2s ease-in;
+}
+.divInput {
+    margin-right: 92px;
 }
 input {
     width: 250px;
@@ -76,7 +84,7 @@ input {
     padding-left: 10px;
     margin: 0px 30px;
     border: 2px solid white;
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 10px white;
 }
 input:hover {
     background-color: rgb(138, 138, 138);
@@ -100,10 +108,10 @@ select {
     height: 33px;
     background: rgb(112, 112, 112);
     border: 2px solid white;
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 10px white;
     font-size: 18px;
     border-radius: 10px;
-    margin-left: 20px;
+    margin: 40px 0 0 20px;
     color: white;
     font-family: sans-serif;
     background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRhMs2riKJ_Eqhhz-YpCBMpEZxRQ_R-5WH2qbPr1_wZuAb74EzqHYjMez3wdoRk0OPqU&usqp=CAU);
@@ -136,8 +144,64 @@ td {
     background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRhMs2riKJ_Eqhhz-YpCBMpEZxRQ_R-5WH2qbPr1_wZuAb74EzqHYjMez3wdoRk0OPqU&usqp=CAU');
 }
 .centerTabl {
+    margin: 50px 0 0 65px;
     width: 800px;
+}
+.centerTabl p {
+    font-size: 35px;
+    font-weight: 600;
+    font-family: system-ui;
+    color: gold;
+    margin: 20px 0 0 500px;
+    text-shadow: 0 0 20px red;
 }
 .miniTab {
     margin: 30px;
+}
+.charts {
+    display: none;
+    width: 750px;
+    height: 340px;
+}
+
+.openChartBtn {
+    margin: 50px 0 20px 60px;
+    width: 170px;
+    height: 60px;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: white;
+    font-family: sans-serif;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRhMs2riKJ_Eqhhz-YpCBMpEZxRQ_R-5WH2qbPr1_wZuAb74EzqHYjMez3wdoRk0OPqU&usqp=CAU);
+}
+.openChartBtn:hover {
+    color:rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 0 20px black;
+    transition: background-color 0.1s ease-in, color 0.3s ease-in, box-shadow 0.3s ease-in, border 0.3s ease-in;
+}
+.closeChartBtn {
+    margin: 50px 0 20px 60px;
+    width: 170px;
+    height: 60px;
+    border: 2px solid red;
+    box-shadow: 0 0 20px red;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 10px;
+    color: red;
+    font-family: sans-serif;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRhMs2riKJ_Eqhhz-YpCBMpEZxRQ_R-5WH2qbPr1_wZuAb74EzqHYjMez3wdoRk0OPqU&usqp=CAU);
+}
+.closeChartBtn:hover {
+    color:rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    box-shadow: 0 0 20px black;
+    transition: background-color 0.1s ease-in, color 0.3s ease-in, box-shadow 0.3s ease-in, border 0.3s ease-in;
+}
+.closeChartBtn {
+    display: none;
 }

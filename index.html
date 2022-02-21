@@ -10,10 +10,19 @@
 
 
 <header>
+
   <div class="buttons">
+
+    <div class="cnv">
+      <canvas id="logo"></canvas>
+    </div>
+
+    <div class="BTNBlock">
     <button class="week">week</button>
     <button class="month">month</button>
     <button class="year">year</button>
+    </div>
+    
 </div>
 
 <div class="divInput">
@@ -30,15 +39,16 @@
         <option>Выберите валюту</option>
       </select>
 
-      <div class="cnv">
-        <canvas id="logo"></canvas>
-      </div>
+      <button class="openChartBtn">Open chart</button>
+      <button class="closeChartBtn">Close chart</button>
       
     </div>
   </div>
 
   <div class="centerTabl">
+    <div class="charts"></div>
     <div class="tab">
+      <p class="currencyNameInTabl">Выберите валюту</p>
       <table class="tabl">
         
       </table>
@@ -59,6 +69,7 @@
   <script src="JavaScript.js"></script>
   <script src="Encapsulation.js"></script>
   <script src="logo.js"></script>
+  <script src="charts.js"></script>
   
 </body>
 </html>
