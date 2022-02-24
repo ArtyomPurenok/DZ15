@@ -32,7 +32,7 @@ function drawBackgroundColor() {
       chart.draw(data, options);
     }
     play();
-    function receivingData(chartData) {
+    function ChartData(chartData) {
         arrChartData = [];
         chartData.forEach(el => arrChartData.push([new Date(el.Date), el.Cur_OfficialRate]));
         //console.log(arrChartData);
