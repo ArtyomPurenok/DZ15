@@ -40,6 +40,7 @@ function drawBackgroundColor() {
     }
     
     openChartBtn.addEventListener('click', function() {
+      play();
       document.querySelector('.charts').style.display = 'block';
       openChartBtn.style.display = 'none';
       closeChartBtn.style.display = 'inline';
