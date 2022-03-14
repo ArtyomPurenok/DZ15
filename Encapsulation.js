@@ -17,7 +17,15 @@ class threeCurrencies extends HTMLElement {
     imgFlagEURO.src = imgEURO;
     imgFlagRUS.src = imgRUS;
 
+    let divjoint = document.createElement('div');  //joint
+    divjoint.setAttribute('class', 'joint')
     
+
+    let divInput = document.createElement('div');  //Input
+    divInput.setAttribute('class', 'inp');
+    let Input = document.createElement('input');
+    Input.setAttribute('type', 'date');
+
     let divFlag  = document.createElement('div');  //divFlag
     divFlag.setAttribute('class', 'Flags');
     let flagOne = document.createElement('div')
@@ -62,11 +70,40 @@ class threeCurrencies extends HTMLElement {
 
     
 
-
-    divgeneral.appendChild(divFlag);
-    divgeneral.appendChild(CurName);
-    divgeneral.appendChild(currencyDiv);
+    divjoint.appendChild(divFlag);
+    divjoint.appendChild(CurName);
+    divjoint.appendChild(currencyDiv);
     
+    divInput.appendChild(Input);
+
+    divgeneral.appendChild(divjoint);
+    divgeneral.appendChild(divInput);
+    
+    
+
+
+    divInput.addEventListener('change', function (event) {
+    let arrAll_Usd_Euro_Rus = [[145, 431], [19, 292, 451], [190, 298, 456]];
+    //console.log(arrAll_Usd_Euro_Rus.length -1)
+    for (let i = 0; i <= arrAll_Usd_Euro_Rus.length -1; i++) {
+      let allPromise = arrAll_Usd_Euro_Rus[i].map((el) => fetch(`https://www.nbrb.by/API/ExRates/Rates/Dynamics/${el}?startDate=${event.target.value}&endDate=${event.target.value}`))
+
+      Promise.all(allPromise)
+      .then((response) => Promise.all(response.map(el => el.json())))
+      .then((data) => {
+        arrAll_Usd_Euro_Rus[i] = data;
+        arrAll_Usd_Euro_Rus[i] = arrAll_Usd_Euro_Rus[i].flat();
+        //console.log(arrAll_Usd_Euro_Rus[i][0].Cur_OfficialRate);
+        currencyDivOne.innerHTML = arrAll_Usd_Euro_Rus[0][0].Cur_OfficialRate;
+        currencyDivTwo.innerHTML = arrAll_Usd_Euro_Rus[1][0].Cur_OfficialRate;
+        currencyDivThree.innerHTML = arrAll_Usd_Euro_Rus[2][0].Cur_OfficialRate;
+       })
+    }
+})
+
+
+
+
     // currency USD
   fetch('https://www.nbrb.by/api/exrates/rates/431')
    .then((response) => response.json())
@@ -84,7 +121,7 @@ class threeCurrencies extends HTMLElement {
     const style = document.createElement('style');
 
     style.textContent = `
-    .divgeneral {
+    .joint {
         color: white;
         font-family: sans-serif;
         background: linear-gradient(to right, #8d8d8d 0%, #525252 100%);
@@ -143,6 +180,22 @@ class threeCurrencies extends HTMLElement {
         padding: 14px 0 0 0;
         width: 85px;
         height: 53px;
+      }
+
+      .inp {
+        text-align: center;
+        heigth: 50px;
+      }
+      input {
+        text-align: center;
+        width: 200px;
+        heigth: 50px;
+        background: rgb(112, 112, 112);
+        color: rgb(247, 232, 204);
+        font-size: 16px;
+        border-radius: 0px 0px 7px 7px;
+        border: 1px solid rgb(112, 112, 112);
+        box-shadow: 0 0 10px gold;
       }
 
       `;

@@ -75,6 +75,7 @@ header {
     margin-right: 92px;
 }
 input {
+    text-align: center;
     width: 250px;
     height: 43px;
     background: rgb(112, 112, 112);
